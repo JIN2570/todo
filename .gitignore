@@ -4,7 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.vscode
+.idea
+.DS_store
 # testing
 /coverage
 
