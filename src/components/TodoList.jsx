@@ -1,28 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
-import TodoItem from './TodoItem';
-import { useTodoState } from '../TodoContext';
 
-const TodoListBlock = styled.div`
-  flex: 1;
-  padding: 20px 32px;
-  padding-bottom: 48px;
-  overflow-y: auto;
-`;
 
-function TodoList() {
-  const todos = useTodoState();
+
+function TodoList({todos, handleSubmit, handleClickTodo, deleteTodo}) {
+  const handleClick = (e, id) => {
+    if (todo.id === id) {
+      todo.completed = !todo.completed
+    }
+    return todo
+  }
   return (
-    <TodoListBlock>
-      {todos.map(todo => (
-        <TodoItem
-          id={todo.id}
-          text={todo.text}
-          done={todo.done}
+    <div className='List'>
+      <TodoForm handleSubmit={handleSubmit} />
+      <ul className='todo-list'>
+        {todos.map(todo => 
+        <SingleTodo
+          todo={todo}
+          handleClick={handleClick}
+          deleteTodo={deleteTodo}
           key={todo.id}
-        />
-      ))}
-    </TodoListBlock>
+          />
+          )};
+      </ul>
+    </div>
+    
   );
 }
 
