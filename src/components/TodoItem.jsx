@@ -31,6 +31,7 @@ const ToDoItem = ({ todoItem, todoList, setTodoList }) => {
   };
 
   const onClickSubmitButton = (e) => {
+    // console.log(onClickSubmitButton);
     if (e.key === 'Enter') {
       const nextTodoList = todoList.map(item => ({
         ...item,
