@@ -1,0 +1,23 @@
+/* TodoForm.css */
+
+.TodoForm { text-align: center; padding: 40px 0; background:#d5d1d3;}
+.TodoForm input {width:400px; height:45px;padding:0 20px; box-sizing: border-box; vertical-align: top;}
+.TodoForm button { width:100px;height:45px;}
+
+
+
+/* TodoList.css */
+
+.TodoList li {padding: 15px 30px; border-bottom: 1px solid #dcdcdc; background: #7c7c7b;; list-style: none;}
+.TodoList {padding-left: 0; margin: 0;}
+.TodoList li span { margin-right: 20px; font-size: 16px; color:#fff ; cursor: pointer;}
+.TodoList li em { color:#fff; cursor: pointer;}
+.TodoList li button { float: right; width: 80px; }
+
+.TodoList li.on span { color:yellow }
+.TodoList li.on em {color:yellow ; text-decoration: line-through;}
+
+
+/* Todos.css */
+.Todos { width: 550px; margin:30px auto;}
+.Todos h1 { text-align: center; padding: 30px 0; background: #ff8f8f; margin: 0;}
